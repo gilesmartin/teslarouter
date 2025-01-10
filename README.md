@@ -1,5 +1,5 @@
 # teslarouter
-Wi-Fi Router for Tesla vehicles based on Raspberry Pi Zero 2W. Especially useful for vehicles imported outside of home location
+Wi-Fi Router for Tesla vehicles based on Raspberry Pi Zero 2W. Especially useful for vehicles imported outside of home country.
 
 This project will utilize a Raspberry Pi Zero 2W, Waveshare USB/ethernet hub, LTE Modem, and USB Bluetooth adapter to create a wifi router that will provide an internet connection for a Tesla vehicle. The device can be powered from a 12-9V to 5v voltage converter connected to the constant 12-9v found in the rearview mirror pod to make sure the connection is always available. In addition, the device can run MQTT2TeslaBLE to enable remote waking of the vehicle.
 
@@ -18,7 +18,7 @@ Attach the usb/eth hub to the Pi using the provided screws and risers. Place in 
 
 Download Raspberry Pi Imager to your PC/Mac. Insert the MicroSD Card into the card reader and insert the reader into anavailable USB port on your mac/PC
 
-On your Mac/PC go to the OpenWRT firmware selector. Chhose the following options:
+On your Mac/PC go to the OpenWRT firmware selector. Choose the following options:
 
 Device: "Raspberry Pi A/A+/B/B+/CM/Zero/ZeroW"
 Release: "24.10.0 RCX"      
@@ -27,7 +27,7 @@ Release: "24.10.0 RCX"
 click the dropdown next to "Customize installed packages and/or first boot script" and enter the following:
 
 Add to the end of Installed Package: 
-tailscale kmod-usb-serial-qualcomm picocom kmod-usb-serial kmod-usb-net kmod-usb-serial-wwan kmod-usb-serial-option kmod-usb-net-qmi-wwan kmod-usb-net-cdc-mbim modemmanager luci-proto-modemmanager kmod-bluetooth bluez-libs bluez-utils kmod-usb-core kmod-usb-uhci kmod-usb2 usbutils nano cfdisk
+   tailscale kmod-usb-serial-qualcomm picocom kmod-usb-serial kmod-usb-net kmod-usb-serial-wwan kmod-usb-serial-option kmod-usb-net-qmi-wwan kmod-usb-net-cdc-mbim modemmanager luci-proto-modemmanager kmod-bluetooth bluez-libs bluez-utils kmod-usb-core kmod-usb-uhci kmod-usb2 usbutils nano cfdisk
 
 Click the cog in the bottom right of the UCI-defaults box and uncomment/edit the following:
  wlan_name="Tesla Wifi"
