@@ -4,7 +4,7 @@ Wi-Fi Router for Tesla vehicles based on Raspberry Pi Zero 2W and OpenWRT. Espec
 This project will utilize a Raspberry Pi Zero 2W, Waveshare USB/ethernet hub, LTE Modem, and USB Bluetooth adapter to create a wifi router that will provide an internet connection for a Tesla vehicle. The device can be powered from a 12-9V to 5v voltage converter connected to the constant 12-9v found in the rearview mirror pod to make sure the connection is always available. In addition, the device can run MQTT2TeslaBLE to enable remote waking of the vehicle.
 
 # Requirements:
-1) Raspberry Pi Zero 2WH: https://www.amazon.de/RASPBERRY-PI-ZERO-2-WH
+1) Raspberry Pi Zero 2W: https://www.amazon.de/Raspberry-Pi-Zero-2-W
 2) Waveshare Eth/USB hub box for Pi 2W: https://www.amazon.de/Waveshare-Ethernet-Raspberry-Compatible-Boards/dp/B09K5DLR17
 3) Linux compatible USB-Bluetooth LE adapter supporting BT>4.0: https://www.amazon.de/Bluetooth-Kopfh%C3%B6rer-Controller-unterst%C3%BCtzt-Windows11
 4) 12-9v to 5v step-down power supply: https://www.amazon.de/APKLVSR-DC-DC-Converter-Power-Supply
