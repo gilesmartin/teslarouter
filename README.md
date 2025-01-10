@@ -27,6 +27,7 @@ Release: "24.10.0 RCX"
 click the dropdown next to "Customize installed packages and/or first boot script" and enter the following:
 
 Add to the end of Installed Package: 
+
    tailscale kmod-usb-serial-qualcomm picocom kmod-usb-serial kmod-usb-net kmod-usb-serial-wwan kmod-usb-serial-option kmod-usb-net-qmi-wwan kmod-usb-net-cdc-mbim modemmanager luci-proto-modemmanager kmod-bluetooth bluez-libs bluez-utils kmod-usb-core kmod-usb-uhci kmod-usb2 usbutils nano cfdisk
 
 Click the cog in the bottom right of the UCI-defaults box and uncomment/edit the following:
