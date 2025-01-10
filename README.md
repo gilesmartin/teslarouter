@@ -63,7 +63,7 @@ Once logged in via SSH we will need to expand the filesystem on the Pi (from htt
 
 Now that we have more space available, we can install the rest of the packages we will need:
 
-   opkg install dockerd docker docker-compose luci-app-dockerman
+    opkg install dockerd docker docker-compose luci-app-dockerman
 
 Now lets set up the USB Modem. Assuming the modem is already in MBIM or QMI Mode we just need to open a web browser and point to 192.168.100.1, enter password "changeme" (or whatever put in above) and do the following:
       1) go to Network > Interfaces
