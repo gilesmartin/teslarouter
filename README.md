@@ -84,5 +84,38 @@ Now lets install Tailscale so we can remotely access the router and so services 
     
 Follow the instructions to connect the device to your tailnet
 
-# Install Tesla MQTT2BLE
+# Install Tesla BLE MQTT
+
+Follow the instructions at this link to install Tesla BLE MQTT. For the server name I recommend using the Tailscale IP address of the server vs the DNS name as this will work even if there are DNS issues (tailscale IPs are static). 
+
+      https://github.com/tesla-local-control/tesla_ble_mqtt_docker/blob/main/INSTALL.md
+
+# Install the router in your vehicle
+
+Now that our Router is ready and configured we will want to install it permanently in our vehicle. To do this we will need to tap the constant 9-12v power provided by the rearview mirror pod and run this to our 5v adapter which will in turn power our router even when the car is asleep and all other vehicle electronics are asleep. This is important so that the car always has an internet connection when it wakes (booting any router/hotspot would likely take too long and the vehicle will disable wifi if a drive starts before it is connected) but also so that we can always access the vehicle via the routers bluetooth in order to send commands and remotely wake the vehicle.
+
+This is not an overly detailed description so I recommend checking out this YouTube video for greater detail on accessing the 12-9V connection: https://www.youtube.com/watch?v=QuSF3I0LpqE
+
+1) Pull down the dome light console and find the 12V+ and 12V- wires
+2) Attach a T-tap to each wire
+3) Run wires from the taps through the hole to the headliner (follow the path of the existing wires) and pull out on the other side of the headliner against the windshield
+4) Connect 12V+ and 12V- to the input on the voltage converter
+5) Connect a USB A to micro cable to the USB port on the voltage converter
+6) Wrap the voltage converter in electrical tape to prevent any parts from shorting out and stuff the assembly into the gap between the headliner and the front windshield/roof
+7) Connect the USB micro end of the cable to the power port on the router
+8) Attach a velcro command strip to the bottom of the router. Mount the router at the top of the windshield on the passenger side as close to the mirror pod as possible
+
+With the router installed in your vehicle, connect your Tesla to the wifi network "Tesla Wifi" and set the option to "remain connected in drive". This will make sure the wifi is always connected and ready whenever the car is awake and while driving.
+
+# Optional: Set up an automation on iPhone to wake the vehicle when you open the Tesla App
+
+1)  make sure you have the Home Assistant configured and working on your phone
+2)  In the Home Assistant app, create an action that will press the "wake" button from the MQTT integration
+3)  In the shortcuts app on the iPhone create a new shortcut that will activate this button
+4)  In the shortcuts app create an automation that will run the shortcut any time the Tesla app is opened
+
+This automation will now wake your Tesla any time you open the Tesla app. If your car was asleep it will wake and be ready for commands within a few seconds of opening the App. If the App shows your car as asleep just wait a few seconds and pull down to refresh.
+
+
+
 
