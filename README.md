@@ -19,15 +19,15 @@ Attach the usb/eth hub to the Pi using the provided screws and risers. Place in 
 
 # Flash SD Card
 
-Download Raspberry Pi Imager to your PC/Mac. Insert the MicroSD Card into the card reader and insert the reader into anavailable USB port on your mac/PC
+Download Raspberry Pi Imager to your PC/Mac. Insert the MicroSD Card into the card reader and insert the reader into an available USB port on your mac/PC
 
 On your Mac/PC go to the OpenWRT firmware selector. Choose the following options:
 
-Device: "Raspberry Pi A/A+/B/B+/CM/Zero/ZeroW"
-Release: "24.10.0 RCX"      
+      -Device: "Raspberry Pi A/A+/B/B+/CM/Zero/ZeroW"
+      -Release: "24.10.0 RCX"      
 *NOTE: older releases do not have the kernel drivers needed to properly support the USB BLE Adapter
 
-click the dropdown next to "Customize installed packages and/or first boot script" and enter the following:
+click the dropdown next to "Customize installed packages and/or first boot script"
 
 Add to the end of Installed Packages: 
 
